@@ -1,0 +1,1 @@
+Chef pee signatures is a catering company that render all forms of catering services, from baking of various pasteries to cooking of all delicacies(Nigerian or overseas). We offer services to clients on weddings, burials, birthdays, anniversary and more
