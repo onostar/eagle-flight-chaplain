@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<widget xmlns   = "http://www.w3.org/ns/widgets"
+    xmlns:gap   = "http://phonegap.com/ns/1.0"
+    id          = "com.phonegap.example"
+    versionCode = "10"
+    version     = "1.0.0" >
+
+<!-- versionCode is optional and Android only -->
+
+  <name>Chef Pee Signatures</name>
+
+  <description>
+      Chef pee signatures is a catering company that render all forms of catering services, from baking of various pasteries to cooking of all delicacies(Nigerian or overseas). We offer services to clients on weddings, burials, birthdays, anniversary and more
+  </description>
+
+  <author href="https://onostarmedia.com.ng" email="support@onostarmedia.com.ng">
+      Onostar Media
+  </author>
+  <icon src="images/chef-pee-logo3.png" />
+
+</widget>
