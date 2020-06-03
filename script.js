@@ -61,14 +61,15 @@ function displayFeatured(){
 }
 
 //display call contact form
-function displayContactForm(){
+/* function displayContactForm(){
     if(document.body.scrollTop > 50 || document.documentElement.scrollTop > 50){
         document.querySelector('.contactForm').style.display = 'block';
     }
     document.querySelector('.contactForm').style.display = 'none';
 }
+ */
 
  //display order confirmation
  /* setTimeout(function(){
    document.querySelector('.order_confirmation').style.display = "block"; 
- }, 2000);
+ }, 2000); */
