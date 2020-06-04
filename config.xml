@@ -16,6 +16,6 @@
   <author href="https://onostarmedia.com.ng" email="support@onostarmedia.com.ng">
       Onostar Media
   </author>
-  <plugin name="cordova-plugin-inappbrowser" spec="~3.2.0" />
+  
   <icon src="images/chef-pee-logo3.png" />
 </widget>
