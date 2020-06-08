@@ -248,7 +248,7 @@ h2{
     font-family:'pacifico';
 }
 .about, .featured, .food-of-the-day, .clientsPhotos, .connect{
-    margin:30px 0;
+    margin:40px 0;
 }
 .about{
     transition:.3s all;
@@ -282,6 +282,10 @@ h2{
     width:32%;
     margin:5px;
     text-align: center;
+}
+.featuredCousines figcaption{
+    font-family: 'Pacifico', 'Sans seriff';
+    font-size:1.2rem;
 }
 .featuredCousines figure button{
     padding:5px 10px;
@@ -352,6 +356,10 @@ h2{
     animation:3s floatFromRight 1;
     animation-fill-mode:forwards;
 }
+#featured4, #featured5{
+    animation:3s floatFromBottom 1;
+    animation-fill-mode:forwards;
+}
 @keyframes floatFromLeft{
     0%{
         transform:translate(-30%);
@@ -376,12 +384,34 @@ h2{
         transform:translate(0);
     }
 }
+@keyframes floatFromBottom{
+    0%{
+        transform:translateY(100%);
+    }
+    100%{
+        transform:translate(0);
+    }
+}
 .about button, .food-of-the-day button{
     background:rgba(201, 104, 120, 0.9);
     border-color:rgba(201, 104, 120, 0.9);
     padding:5px 15px;
     box-shadow: 3px 3px 3px rgba(87, 31, 40, 0.5);
     transition:.3s all;
+}
+.food-of-the-day{
+    padding-top:50px;
+    animation: 3s zoomoutFood 1;
+}
+@keyframes zoomoutFood{
+    0%{
+        opacity:0;
+        transform:scale(0);
+    }
+    100%{
+        opacity:1;
+        transform:scale(1);
+    }
 }
 .food-of-the-day button{
     margin:0;
@@ -440,6 +470,67 @@ h2{
 .clientsPhotos .clients img{
     width:24%;
     margin:4px;
+}
+.tips{
+    animation: 2s rotateZoom 1;
+}
+@keyframes rotateZoom{
+    0%{
+        transform:scale(0);
+    }
+    100%{
+        transform:scale(1);
+    }
+}
+.tips p{
+    width:60%;
+    text-align:center;
+    margin:0 auto;
+}
+.tipsNtricks{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+.tips article{
+    width:30%;
+    margin:5px;
+}
+.tips article:hover{
+    animation:1s animateArtcle 1;
+    animation-fill-mode: forwards;
+}
+@keyframes animateArtcle{
+    100%{
+        transform:scale(1.2);
+        opacity:.9;
+    }
+}
+.tips article a{
+    color:#000;
+    text-align:center;
+}
+.tips article a:hover{
+    text-decoration:none;
+}
+.tips figure{
+    height:250px;
+}
+.tips figure img{
+    height:60%;
+    width:100%;
+}
+.tips figure figcaption h4{
+    font-weight:bold;
+    font-size:1rem;
+    margin:0;
+}
+.get-in-touch{
+    width:100%;
+    background-color:radial-gradient(pink, blue);
+}
+.get-in-touch h2{
+    color:#fff;
 }
 .connect{
     text-align:center;

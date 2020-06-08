@@ -1,4 +1,4 @@
-window.onscroll = function(){changeHeader(), showTotopButton(), displayAbout(), displayFeatured(), displayContactForm()};
+window.onscroll = function(){changeHeader(), showTotopButton(), displayAbout(), displayTips(), displayContactForm()};
 function changeHeader(){
     if(document.body.scrollTop > 35 || document.documentElement.scrollTop > 35){
         document.getElementById('mainHeader').className = 'new-header';
@@ -60,6 +60,22 @@ function displayFeatured(){
     }
 }
 
+function displayTips(){
+    if(document.body.scrollTop > 2000 || document.documentElement.scrollTop > 2000){
+        document.querySelector('.tips').style.display = 'block';
+    }
+    else{
+        document.querySelector('.tips').style.display = 'none';
+    }
+}
+/* function displayFoodOfTheDay(){
+    if(document.body.scrollTop > 1000 || document.documentElement.scrollTop > 1000){
+        document.querySelector('.food-of-the-day').style.display = 'block';
+    }
+    else{
+        document.querySelector('.food-of-the-day').style.display = 'none';
+    }
+} */
 //display call contact form
 /* function displayContactForm(){
     if(document.body.scrollTop > 50 || document.documentElement.scrollTop > 50){
