@@ -11,6 +11,7 @@ function changeHeader(){
         /* document.querySelector('.logo').className = 'logo'; */
     }
 }
+
 function displayMenu(){
     let mobileMenu = document.getElementById('navigation')
     if(mobileMenu.style.display === "block"){
