@@ -548,6 +548,7 @@ h2{
 }
 .infos{
     font-size:1.1rem;
+    width:50%;
     color:#fff;
     text-align:center;
 }
@@ -1213,6 +1214,7 @@ footer .copy-right{
     }
     .infos{
         font-size:1rem;
+        width:100%;
     }
     .get-in-touch .contactForm{
         width:100%;
