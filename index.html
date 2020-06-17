@@ -39,8 +39,8 @@
                 <h2>An amazing experience for all</h2>
                 <p>We offer drop-off to full-service catering, launch parties, weddings, and more. See our menu for an experience</p>
                 <div>
-                    <a href="catering_menu.html"><button>View menu</button></a>
-                    <a  href="gallery.html"><button class="trans">gallery</button></a>
+                    <a href="order.html"><button>Place Order</button></a>
+                    <a  href="gallery.html"><button class="trans">View gallery</button></a>
                 </div>
             </div>
             <div class="indicator">
@@ -219,37 +219,46 @@
         </section>
     </section>
     <section class="get-in-touch" id="getIntouch">
-        <div class="contactForm">
-            <h2 class="text-center">Get in touch</h2>
-            <form method="POST" action="contact.php" id="contactForm">
-                <div class="contact-flex">
-                    <input type="text" name="contactName" id="contactName" placeholder="Full Name*" required>
-                    <input type="text" name="contactEmail" id="contactEmail" placeholder="Email*" required>
-                </div>
-                <div class="contact-flex">
-                    <input type="tel" name="contacPhone" id="contactPhone" placeholder="Phone Number*" required>
-                    <input type="text" name="contactAddress" id="contactAddress" placeholder="Your Address*" required>
-                </div>
-                <div class="contact-flex">
-                    <select name="serviceRequest" id="serviceRequest">
-                        <option selected value="">Service Request</option>
-                        <option value="Complaints and review">General Complaints and review</option>
-                        <option value="Full catering service">Full catering service</option>
-                        <option value="Corporate catering">Corporate catering service</option>
-                        <option value="Drop-off catering">Drop-off catering</option>
-                        <option value="Wedding package">Wedding package</option>
-                        <option value="cooking lessons">Cooking lessons</option>
-                    </select>
-                    <input type="text" name="eventDate" id="eventDate" placeholder="Event Date">
-                </div>
-                <div class="contact-flex">
-                    <input type="text" name="eventBudget" id="eventBudget" placeholder="Event Budget">
-                    <input type="text" name="eventLocation" id="eventLocation" placeholder="Event Location">
-                </div>
-                <textarea name="contactMessage" id="contactMessage" placeholder="Your message"></textarea>
-                <button type="submit" name="submitContact" id="submitContact">Send</button>
-            </form>
+        <h2 class="text-center">Get in touch with us</h2>
+        <div class="contactInfo">
+            <div class="infos">
+                <h3>Visit us:</h3>
+                <p>Bringing your kitchen closer to you.<br>For more information or to get a delivery, Please visit us at our Office:<br>
+                22 johnson ville, Warri, Nigeria.<br><br>Or call us: 08012345678<br>Email: sales@chefpeesignatures.com</p>
+            </div>
+            <div class="contactForm">
+                <h3 class="text-center">Request a quote</h3>
+                <form method="POST" action="contact.php" id="contactForm">
+                    <div class="contact-flex">
+                        <input type="text" name="contactName" id="contactName" placeholder="Full Name*" required>
+                        <input type="text" name="contactEmail" id="contactEmail" placeholder="Email*" required>
+                    </div>
+                    <div class="contact-flex">
+                        <input type="tel" name="contacPhone" id="contactPhone" placeholder="Phone Number*" required>
+                        <input type="text" name="contactAddress" id="contactAddress" placeholder="Your Address*" required>
+                    </div>
+                    <div class="contact-flex">
+                        <select name="serviceRequest" id="serviceRequest">
+                            <option selected value="">Service Request</option>
+                            <option value="Complaints and review">General Complaints and review</option>
+                            <option value="Full catering service">Full catering service</option>
+                            <option value="Corporate catering">Corporate catering service</option>
+                            <option value="Drop-off catering">Drop-off catering</option>
+                            <option value="Wedding package">Wedding package</option>
+                            <option value="cooking lessons">Cooking lessons</option>
+                        </select>
+                        <input type="text" name="eventDate" id="eventDate" placeholder="Event Date">
+                    </div>
+                    <div class="contact-flex">
+                        <input type="text" name="eventBudget" id="eventBudget" placeholder="Event Budget">
+                        <input type="text" name="eventLocation" id="eventLocation" placeholder="Event Location">
+                    </div>
+                    <textarea name="contactMessage" id="contactMessage" placeholder="Your message"></textarea>
+                    <button type="submit" name="submitContact" id="submitContact">Send</button>
+                </form>
+            </div>
         </div>
+        
     </section>
     <section class="container">
         <!-- social media section -->

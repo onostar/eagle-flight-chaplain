@@ -400,7 +400,6 @@ h2{
     transition:.3s all;
 }
 .food-of-the-day{
-    padding-top:50px;
     animation: 3s zoomoutFood 1;
 }
 @keyframes zoomoutFood{
@@ -494,6 +493,7 @@ h2{
 }
 .tips article{
     width:30%;
+    padding:10px;
     margin:5px;
 }
 .tips article:hover{
@@ -519,18 +519,42 @@ h2{
 .tips figure img{
     height:60%;
     width:100%;
+    margin-bottom:5px;
 }
 .tips figure figcaption h4{
     font-weight:bold;
     font-size:1rem;
     margin:0;
 }
+.tips figure figcaption p{
+    width:100%;
+}
 .get-in-touch{
     width:100%;
-    background-color:radial-gradient(pink, blue);
+    background:radial-gradient(#e66465, #9198e5);
+    padding:10px;
 }
 .get-in-touch h2{
     color:#fff;
+}
+.contactInfo{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+.get-in-touch h3{
+    color:#fff;
+    font-size:1.3rem;
+}
+.infos{
+    font-size:1.1rem;
+    color:#fff;
+    text-align:center;
+}
+.get-in-touch .contactForm{
+    width:50%;
+    margin:10px;
+    opacity:.9;
 }
 .connect{
     text-align:center;
@@ -1027,6 +1051,22 @@ footer .copy-right{
     .clientsPhotos .clients img{
         width:30%;
     }
+    .tips p{
+        width:80%;
+    }
+    .tipsNtricks{
+        flex-wrap:wrap;
+    }
+    .tips article{
+        width:45%;
+    }
+    .infos{
+        font-size:1rem;
+    }
+    .get-in-touch .contactForm{
+        width:80%;
+        margin:5px;
+    }
     .connect .fab{
         font-size:2rem;
         margin:0 5px;
@@ -1152,6 +1192,32 @@ footer .copy-right{
     }
     .call-to-action .in-house-text button{
         padding:10px 15px;
+    }
+    .tips p{
+        width:90%;
+    }
+    .tipsNtricks{
+        flex-direction:column;
+    }
+    .tips article{
+        width:80%;
+        padding:5px;
+        margin:3px;
+    }
+    .contactInfo{
+        flex-direction:column;
+    }
+    .get-in-touch h3{
+        color:#fff;
+        font-size:1.3rem;
+    }
+    .infos{
+        font-size:1rem;
+    }
+    .get-in-touch .contactForm{
+        width:100%;
+        margin:10px;
+        opacity:.9;
     }
     .order_confirmation{
         padding:10px;
