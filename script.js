@@ -62,7 +62,7 @@ function displayFeatured(){
 }
 
 function displayTips(){
-    if(document.body.scrollTop > 2000 || document.documentElement.scrollTop > 2000){
+    if(document.body.scrollTop > 2400 || document.documentElement.scrollTop > 2400){
         document.querySelector('.tips').style.display = 'block';
     }
     else{
@@ -78,13 +78,15 @@ function displayTips(){
     }
 } */
 //display call contact form
-/* function displayContactForm(){
-    if(document.body.scrollTop > 50 || document.documentElement.scrollTop > 50){
+function displayContactForm(){
+    if(document.body.scrollTop > 2500 || document.documentElement.scrollTop > 2500){
         document.querySelector('.contactForm').style.display = 'block';
     }
-    document.querySelector('.contactForm').style.display = 'none';
+    else{
+        document.querySelector('.contactForm').style.display = 'none';
+    }
 }
- */
+
 
  //display order confirmation
  /* setTimeout(function(){

@@ -531,7 +531,7 @@ h2{
 }
 .get-in-touch{
     width:100%;
-    background:radial-gradient(#e66465, #9198e5);
+    background:radial-gradient(#e66465, #8f97e5);
     padding:10px;
 }
 .get-in-touch h2{
@@ -556,6 +556,17 @@ h2{
     width:50%;
     margin:10px;
     opacity:.9;
+    animation:1s lookOut 1;
+}
+@keyframes lookOut{
+    0%{
+        opacity:0;
+        transform:scale(0);
+    }
+    100%{
+        opacity:1;
+        transform:scale(1);
+    }
 }
 .connect{
     text-align:center;
@@ -814,8 +825,9 @@ footer .copy-right{
     align-items: center;
     text-align: center;
     padding:20px;
-    background:rgba(248, 246, 246, 0.9);
+    background:rgb(201, 104, 120);
     z-index:2;
+    color:#fff;
     width:300px;
     height:auto;
     border-radius:5px;
@@ -838,7 +850,7 @@ footer .copy-right{
 .order_confirmation .buttons button{
     padding:5px 10px;
     border-radius:0;
-    
+    background:rgb(68, 33, 39);
 }
 @keyframes displayOrderMore{
     100%{
