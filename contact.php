@@ -98,7 +98,7 @@
         </div>
         <div class='contact_success'>
             <p>Thanks for contacting us!<br>
-            We ill be in touch shortly</p>
+            We will be in touch shortly</p>
             <button><a href='index.html#getIntouch'>Ok</a></button>
         </div>
     </body>
