@@ -1,24 +1,24 @@
 <?php 
-    $name = $_POST['contactName'];
-    $email = $_POST['contactEmail'];
-    $phone = $_POST['contactPhone'];
-    /* $address = $_POST['contactAddress']; */
-    $service = $_POST['serviceRequest'];
-    /* $eventDate = $_POST['eventDate'];
-    $eventBudget = $_POST['eventBudget'];
-    $eventLocation = $_POST['eventLocation']; */
-    $message = $_POST['contactMessage'];
-    $formContent = "From: $name \n Phone Number: $phone \n Service requested: $service \n Message: $message";
-    $recipient = "info@eagleflightchaplain.org";
-    $subject = "Contact form from Eagle flight chaplain";
+    $name = $_POST['fullName'];
+    $email = $_POST['email'];
+    $phone = $_POST['phone'];
+    $address = $_POST['address'];
+    $age = $_POST['age'];
+    /* $busStop = $_POST['busStop']; */
+    $sex = $_POST['sex'];
+   /*  $quantity = $_POST['quantity']; */
+    /* $message = $_POST['otherInformation']; */
+    $orderContent = "From: $name \n Phone Number: $phone \n Address: $address \n Age: $age \n Gender: $sex";
+    $recipient = "volunteer@eagleflightchaplain.org";
+    $subject = "New member registration";
     $mailheader = "From: $email \r\n";
-    mail($recipient, $subject, $formContent, $mailheader) or die("Error!");
+    mail($recipient, $subject, $orderContent, $mailheader) or die("Error!");
     echo "<!DOCTYPE html>
     <html lang='en'>
     <head>
         <meta charset='UTF-8'>
         <meta name='viewport' content='width=device-width, initial-scale=1.0'>
-        <title>Contact us - Eagle flight chaplain</title>
+        <title>Join us - Eagle flight chaplain</title>
         <style>
             *{
                 margin:0;
@@ -94,15 +94,16 @@
     </head>
     <body>
         <div class='contact_img'>
-            <img src='images/efc-guys.jpg' alt='eagle flight chaplain'>
+            <img src='images/efc_photo5.png' alt='eagle flight chaplain'>
         </div>
         <div class='contact_success'>
-            <p>Thanks for contacting us!<br>
-            We will be in touch shortly</p>
-            <button><a href='index.html#getIntouch'>Ok</a></button>
+            <p>Your registration is completed!<br>
+            Further information will be sent to your mail</p>
+            <button><a href='index.html'>Ok</a></button>
         </div>
     </body>
     </html>";
 
+   
 
 ?>

@@ -1,1 +1,1 @@
-Chef pee signatures is a catering company that render all forms of catering services, from baking of various pasteries to cooking of all delicacies(Nigerian or overseas). We offer services to clients on weddings, burials, birthdays, anniversary and more
+Eagle Flight Chaplain is a Christian Organisation that engages in reaching out to students in schools, prisoners in the prison/correctional centers, reaching out to the sick in hospitals and praying for them, as well as reaching out to the public through Crusades in cities and villages

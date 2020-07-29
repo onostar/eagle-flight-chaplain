@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&family=Pacifico&family=Roboto:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Coda+Caption:wght@800&display=swap');
 *{
     padding:0;
     margin:0;
@@ -7,10 +8,10 @@
 body{
     font-size:15px;
     line-height:1.5;
-    font-family: 'Roboto';
+    font-family: 'Open Sans';
 }
 a{
-    color:rgb(214, 113, 130);
+    color:greenyellow;
 }
 a button{
     color:#fff;
@@ -31,6 +32,7 @@ a button{
     background:rgba(41, 40, 40, 0.05);
     display:flex;
     justify-content:space-around;
+    align-items: center;
     transition: 0.3s all;
 }
 .new-header{
@@ -38,30 +40,48 @@ a button{
     top:0;
     left:0;
     width:100%;
-    height:10vh;
+    min-height:10vh;
     z-index:1;
     display:flex;
+    padding:0 20px;
     justify-content: space-around;
-    background:rgba(48, 44, 45, 0.7);
+    align-items: center;
+    background:rgba(0, 0, 0, .8);
     transition: 0.3s all;
 }
 h1{
-    width:15vw;
-    height:100%;
+    padding:1px;
+    min-height:8vh;
+}
+h1 a{
+    text-decoration: none;
+    display:flex;
+    align-items:center;
+    height:auto;
 }
 h1 img{
-    width:70%;
+    width:8%;
     height:100%;
 }
-
+h1 .title{
+    color:#fff;
+    font-family:'Coda caption';
+    text-transform: uppercase;
+    font-size:1.4rem;
+    text-decoration:none;
+}
+.title .tagline{
+    font-size:1.3rem;
+    color:rgb(226, 223, 223);
+    margin-left:10px;
+    text-transform: capitalize;
+    font-family:'pacifico';
+}
 #navigation{
     width:60%;
 }
 nav ul{
     transition:0.3s all;
-}
-nav li a{
-    color:#fff;
 }
 nav ul li{
     display:inline-block;
@@ -75,15 +95,19 @@ nav ul li:hover{
 }
 nav ul li a{
     font-family:'Open-Sans';
-    font-size:1.1rem;
-    padding:10px 15px;
+    font-size:.9rem;
+    padding:10px;
+    font-family: 'open sans';
+    color:#fff;
+    text-transform: uppercase;
     transition:.3s all;
 }
-nav ul li a:hover, .active{
-    background-color:rgba(201, 104, 120, 0.9);
+nav ul li a:hover, nav ul li a:focus, .active{
     text-decoration:none;
     border-radius:5px;
-    color:#fff;
+    border-bottom:2px solid #fff;
+    color:greenyellow;
+    font-weight:bold;
 }
 nav ul li ul{
     display:none;
@@ -115,17 +139,58 @@ nav ul li ul li a:hover{
     border-radius:0;
     background:rgba(201, 104, 120, 0.9);
 }
+.top_contact{
+    color:#fff;
+}
 .menu-icon{
     display:none;
+}
+.sliding{
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    overflow:hidden;
+}
+
+.slidethis{
+    position:relative;
+    width:200%;
+    top:0;
+    left:0;
+    height:100%;
+    animation:slideLeft 20s infinite;
+}
+@keyframes slideLeft{
+    0%{
+        left:0;
+    }
+    50%{
+        left:0;
+    }
+    51%{
+        left:-100%;
+    }
+    100%{
+        left:-100%;
+    }
+}
+
+.slidethis .bana{
+    position:relative;
+    height:100%;
+    float:left;
+    width:50%;
 }
 .banner{
     position:absolute;
     top:0;
+    left:0;
     width:100%;
     height:100%;
     
 }
-
 .banner img{
     height:100%;
     width:100%;
@@ -138,7 +203,7 @@ nav ul li ul li a:hover{
     position:absolute;
     top:0;
     left:0;
-    background-color:rgba(41, 40, 40, 0.4);
+    background-color:rgba(41, 40, 40, 0.5);
 }
 .tag{
     width:100%;
@@ -154,12 +219,17 @@ nav ul li ul li a:hover{
     
 }
 .tag .animate{
-    transform:scale(.7);
+    transform:scale(.4);
     opacity:0;
-    animation:3s zoomin 1;
+    animation:10s zoomin infinite;
     animation-fill-mode: forwards;
 }
 @keyframes zoomin{
+    50%{
+        opacity:1;
+        transform:scale(1);
+        
+    }
     100%{
         opacity:1;
         transform:scale(1);
@@ -168,25 +238,24 @@ nav ul li ul li a:hover{
 }
 
 .tag h2{
-    font-family:'pacifico';
+    font-family:'Coda caption';
     font-size:2.5rem;
-    margin-bottom:10px;
+    margin-bottom:5px;
     color:#fff;
     letter-spacing: 4px;
 }
 .tag p{
-    width:50%;
+    width:60%;
     margin:0 auto;
     font-family:'Open-Sans';
-    font-size:1.1rem;
+    font-size:1.2rem;
 }
 button{
-    background:rgba(201, 104, 120, 0.9);
-    border-color:rgba(201, 104, 120, 0.9);
-    margin:10px 5px;
+    background:green;
+    border-color:#fff;
+    margin:20px 5px;
     border-radius:3px;
     font-size:0.9rem;
-    font-family:'cambria';
     transition:.3s all;
 }
 button:hover{
@@ -194,22 +263,37 @@ button:hover{
 }
 .tag button{
    
-    border:2px solid rgba(201, 104, 120, 0.9);
+    border:2px solid #fff;
     box-shadow: none;
+    background:green;
     transition:.3s all;
-    padding:5px 15px;
+    padding:10px 15px;
     margin:10px 5px;
     border-radius:0;
     font-size:0.9rem;
     text-transform: uppercase;
-    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    animation:2s rollin 1;
+    animation-fill-mode: forwards;
+    animation-delay:2s;
+    opacity:0;
+}
+@keyframes rollin{
+    0%{
+        opacity:0;
+        transform:translateY(100%);
+    }
+    100%{
+        opacity:1;
+        transform:translateY(0);
+    }
 }
 .tag .trans{
     background:transparent;
+    animation-delay:3s;
 }
 .tag button:hover{
-    background:rgba(114, 48, 59, 0.9);
-    border-color:rgba(201, 104, 120, 0.9);
+    background:yellowgreen;
+    color:#000;
     transform:scale(1);
 }
 .tag button:hover{
@@ -218,7 +302,7 @@ button:hover{
 .indicator{
     position:absolute;
     top:90vh;
-    background:rgba(201, 104, 120, 0.7);
+    background:rgba(255, 0, 0, .6);
     padding:10px 15px;
     border-radius: 50%;
     cursor:pointer;
@@ -243,12 +327,28 @@ button:hover{
 .main{
     background:rgba(224, 207, 210, 0.9)
 }
+#welcome{
+    margin:40px 0;
+}
+#welcome h2{
+    font-family:'Coda caption', cursive;
+    text-align:center;
+    text-transform: uppercase;
+    font-size:1.5rem;
+}
+hr{
+    height:3px;
+    width:50px;
+    margin: 10px auto;
+    background:green;
+}
 h2{
-    color:rgba(46, 44, 44, 0.9);
-    font-family:'pacifico';
+    color:rgba(46, 44, 44, 0.8);
+    font-family:'coda caption';
+    font-size:1.3rem;
 }
 .about, .featured, .food-of-the-day, .clientsPhotos, .connect{
-    margin:40px 0;
+    margin:30px 0;
 }
 .about{
     transition:.3s all;
@@ -267,14 +367,20 @@ h2{
     }
 }
 .new-about button{
-    background:rgba(201, 104, 120, 0.9);
-    border-color:rgb(214, 113, 130);
+    background:transparent;
+    color:#000;
+    border-radius: 0;
+    border-color:yellowgreen;
     box-shadow:2px 2px 2px rgba(151, 148, 148, 0.9);
+    transition:.3s all;
+}
+.new-about button:hover{
+    background:green;
 }
 .featuredCousines{
     display:flex;
     justify-content: center;
-    align-items:center;
+    align-items:flex-start;
     flex-wrap: wrap;
 }
 .featuredCousines figure{
@@ -283,10 +389,10 @@ h2{
     margin:5px;
     text-align: center;
 }
-.featuredCousines figcaption{
-    font-family: 'Pacifico', 'Sans seriff';
-    font-size:1.2rem;
-}
+.featuredCousines figcaption h3{
+    
+    font-size:1rem;
+}/* 
 .featuredCousines figure button{
     padding:5px 10px;
     border-radius:1px;
@@ -294,7 +400,7 @@ h2{
     background:transparent;
     text-align:center;
     transition:.3s all;
-}
+} *//* 
 .featuredCousines figure button a{
     color:#000;
     text-transform: uppercase;
@@ -302,39 +408,28 @@ h2{
 .featuredCousines figure button a:hover{
     text-decoration:none;
     color:#fff;
+} */
+#causes p{
+    width:70%;
+    margin:0 auto;
 }
 .featuredCousines figure button:hover, .food-of-the-day button:hover{
     text-decoration:none;
     background:rgba(201, 104, 120, 0.9);
 }
 .featuredSlide{
-    position:relative;
+    /* position:relative;
     width:200%;
     left:0;
     margin:0;
     padding:0;
-    animation:10s slide infinite;
-}
-@keyframes slide{
-    0%{
-        left:0;
-    }
-    40%{
-        left:0;
-    }
-    50%{
-        left:-100%
-    }
-    100%{
-        left:-100%;
-    }
-
+    animation:10s slide infinite; */
+    width:100%;
 }
 .featuredSlide .slideImg{
-    width:50%;
-    float:left;
+    width:100%;
     border:1px solid rgba(211, 206, 206, 0.6);
-    border-radius: 5px;;
+    border-radius: 5px;
     
 }
 .slideImg img{
@@ -355,11 +450,11 @@ h2{
 #featured3{
     animation:3s floatFromRight 1;
     animation-fill-mode:forwards;
-}
+}/* 
 #featured4, #featured5{
     animation:3s floatFromBottom 1;
     animation-fill-mode:forwards;
-}
+} */
 @keyframes floatFromLeft{
     0%{
         transform:translate(-30%);
@@ -393,9 +488,10 @@ h2{
     }
 }
 .about button, .food-of-the-day button{
-    background:rgba(201, 104, 120, 0.9);
-    border-color:rgba(201, 104, 120, 0.9);
+    background:red;
+    border-color:yellowgreen;
     padding:5px 15px;
+    border-radius: 0;
     box-shadow: 3px 3px 3px rgba(87, 31, 40, 0.5);
     transition:.3s all;
 }
@@ -415,6 +511,11 @@ h2{
 .food-of-the-day button{
     margin:0;
 }
+.food-of-the-day button:hover, .food-of-the-day button:focus{
+    background:green;
+    color:#fff;
+    border-color:yellowgreen;
+}
 .daily-food-price p{
     font-size:1.5rem;
 }
@@ -427,15 +528,48 @@ h2{
     width:50%;
     height:100%;
 }
+.in-house-image{
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+}
+.in-house-image:before{
+    content:'';
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:rgb(0, 0, 0, .9);
+}
+.in-house-image img{
+    width:100%;
+    height:100%;
+}
 .call-to-action .in-house-text{
+    position:relative;
     width:50%;
     padding:20px 50px;
     text-align:center;
-    background:rgba(167, 72, 87, 0.9);
+    background:#000;
     color:#fff;
     height:100%;
+    font-size:1rem;
 }
-
+.in-house{
+    position:absolute;
+    display:flex;
+    flex-direction:column;
+    text-align: center;
+    left:0;
+    justify-content: center;
+    padding:10px;
+    top:0;
+    width:100%;
+    height:100%;
+}
 .call-to-action .in-house-text h2{
     font-size:1.8rem;
     color:#fff;
@@ -444,8 +578,10 @@ h2{
     font-family:'Open Sans';
     font-weight:800;
     font-size:2rem;
+    color:#fff;
     line-height: 1;
     letter-spacing: 4px;
+    margin:10px 0;
 }
 .call-to-action .in-house-text button{
     border:2px solid #fff;
@@ -454,10 +590,10 @@ h2{
     border-radius:0;
     text-transform: uppercase;
 }
-.call-to-action .in-house-text button:hover{
-    background:#fff;
-    color:#000;
-    border-color:#000;
+.call-to-action .in-house-text button:hover, .call-to-action .in-house-text button:focus{
+    background:green;
+    color:#fff;
+    border-color:yellowgreen;
     transform:scale(1);
 }
 .clientsPhotos .clients{
@@ -469,9 +605,26 @@ h2{
 .clientsPhotos .clients img{
     width:24%;
     margin:4px;
+    transition:.3s all;
 }
+.clientsPhotos .clients img:hover{
+    transform:scale(1.1);
+    opacity:.8;
+    border-color:yellowgreen;
+}
+.clientsPhotos button{
+    padding:10px;
+    
+
+}
+/* .clientsPhotos i{
+    background:rgb(2, 15, 2);
+    padding:10px;
+    margin:0;
+} */
 .tips{
     animation: 2s rotateZoom 1;
+    margin-bottom:20px;
 }
 @keyframes rotateZoom{
     0%{
@@ -488,10 +641,14 @@ h2{
 }
 .tipsNtricks{
     display:flex;
-    justify-content:center;
+    justify-content:space-around;
     align-items:center;
+    flex-wrap:wrap;
 }
-.tips article{
+.tipsNtricks img{
+    width:100px;
+}
+/* .tips article{
     width:30%;
     padding:10px;
     margin:5px;
@@ -499,13 +656,13 @@ h2{
 .tips article:hover{
     animation:1s animateArtcle 1;
     animation-fill-mode: forwards;
-}
+} */
 @keyframes animateArtcle{
     100%{
         transform:scale(1.2);
         opacity:.9;
     }
-}
+}/* 
 .tips article a{
     color:#000;
     text-align:center;
@@ -528,10 +685,10 @@ h2{
 }
 .tips figure figcaption p{
     width:100%;
-}
+} */
 .get-in-touch{
     width:100%;
-    background:radial-gradient(#e66465, #8f97e5);
+    background:green;
     padding:10px;
 }
 .get-in-touch h2{
@@ -544,13 +701,16 @@ h2{
 }
 .get-in-touch h3{
     color:#fff;
-    font-size:1.3rem;
+    font-size:1rem;
 }
+
 .infos{
     font-size:1.1rem;
     width:50%;
     color:#fff;
-    text-align:center;
+}
+.infos i{
+    color:yellow;
 }
 .get-in-touch .contactForm{
     width:50%;
@@ -579,13 +739,13 @@ h2{
     color:#3b5998;
 }
 .connect .fa-instagram{
-    color:#3f729b;
+    color:rgb(255, 115, 0)
 }
 .connect .fa-twitter{
     color:#00acee;
 }
-.connect .fa-youtube{
-    color:#c4302b;
+.connect .fa-linkedin{
+    color:#0072b1;
 }
 .connect a i:hover{
     opacity: 0.6;
@@ -597,9 +757,13 @@ footer{
     color:rgb(240, 230, 230);
     font-family:'Open Sans'
 }
+footer h3{
+    color:rgb(230, 225, 225);
+}
 h3{
-    font-family: 'pacifico';
+    font-family: 'Coda Caption';
     font-size:1rem;
+    color:rgba(26, 25, 25, .8);
 }
 .bottom-nav li{
     display:inline-block;
@@ -621,13 +785,13 @@ footer .copy-right{
 }
 .to-top a{
     color:#fff;
-    background:rgba(201, 104, 120, 0.9);
+    background:yellowgreen;
     padding:5px 10px;
     border-radius:3px;
     transition:.3s all;
 }
 .to-top a:hover{
-    background:rgba(121, 57, 68, 0.7);
+    background:green;
 }
 .order{
     display:none;
@@ -637,15 +801,19 @@ footer .copy-right{
 }
 .order a{
     background:#3b5998;
-    padding:8px;
+    padding:10px;
     color:#fff;
     border-radius:5px 0 0 5px;
     transition:.3s all;
     font-family:cambria;
+    text-transform: uppercase;
 }
 .order a:hover{
     text-decoration:none;
     background:#192d57
+}
+.order i{
+    font-size:1.1rem;
 }
 .help{
     display:none;
@@ -658,7 +826,7 @@ footer .copy-right{
     color:#fff;
     background:green;
     border-radius:0 7px 7px 0;
-    padding:8px;
+    padding:10px;
     
 }
 @keyframes beating{
@@ -686,6 +854,33 @@ footer .copy-right{
 }
 #whoWeAre .serv:hover{
     transform:scale(.9);
+}
+#theTeam{
+    text-align: center;
+}
+.members{
+    display:flex;
+    align-items:center;
+    justify-content: space-around;
+    flex-wrap:wrap;
+}
+.members figure{
+    height:250px;
+    width:23%;
+    background:yellowgreen;
+    border:1px solid #c4c4c4;
+}
+.members figure img{
+    height:60%;
+    width:80%;
+    margin:0 auto;
+    border-radius:50%;
+    border:2px solid #fff;
+}
+.members figcaption{
+    background:#fff;
+    height:40%;
+    padding:10px;
 }
 #menuPage{
     min-height:40vh;
@@ -786,7 +981,7 @@ footer .copy-right{
     margin:0;
 }
 #orderForm{
-    border:5px solid rgba(201, 104, 120, 0.9);
+    border:5px solid yellowgreen;
     box-shadow:3px 3px 3px rgba(235, 233, 233, 0.6);
     border-radius:5px;
     width:30%;
@@ -798,7 +993,7 @@ footer .copy-right{
     display:block;
     width:100%;
     border-radius:4px;
-    margin:5px 0;
+    margin:1px 0;
     padding:5px;
     opacity:.9;
 }
@@ -872,7 +1067,7 @@ footer .copy-right{
     width:100%;
     border:1px solid rgba(211, 206, 206, 0.8);
     box-shadow:3px 3px 2px rgba(211, 206, 206, 0.9);
-    background:rgba(201, 104, 120, 0.5)
+    background:#000;
 }
 #contactForm input, #contactForm select{
     padding:5px;
@@ -896,12 +1091,15 @@ footer .copy-right{
     margin:0 auto;
     color:#fff;
     display:block;
+    padding:10px;
     width:100%;
     box-shadow:none;
-    background:rgba(201, 104, 120, 0.6);
+    background:yellowgreen;
     text-transform:uppercase;
 }
-
+#contactForm button:hover, #contactForm button:focus{
+    background:green;
+}
 .blog_posts{
     margin-top:30px;
     display:flex;
@@ -982,12 +1180,17 @@ footer .copy-right{
         min-height:10vh;
     }
     h1{
-        width:25vw;
+        width:70vw;
     }
     h1 img{
-        width:100%;
+        width:12%;
     }
-    
+    h1 .title{
+        font-size:1.1rem;
+    }
+    .title .tagline{
+        font-size:.9rem;
+    }
     #navigation{
         display:none;
         position:absolute;
@@ -996,7 +1199,7 @@ footer .copy-right{
         width:0%;
         margin:0;
         padding:0;
-        background:rgb(240, 231, 231);
+        background:#fff;
         animation:.7s dropDown 1;
         animation-fill-mode: forwards;
         z-index:2;
@@ -1031,7 +1234,8 @@ footer .copy-right{
         display:block;
     }
     nav ul li a:hover{
-        background:rgba(201, 104, 120, 0.9);
+        background:yellowgreen;
+        color:#fff;
         border-radius:0;
     }
     nav ul li ul{
@@ -1061,6 +1265,9 @@ footer .copy-right{
     .featuredCousines figure{
         width:45%;
     }
+    #causes p{
+        width:80%;
+    }
     .clientsPhotos .clients img{
         width:30%;
     }
@@ -1081,7 +1288,7 @@ footer .copy-right{
         margin:5px;
     }
     .connect .fab{
-        font-size:2rem;
+        font-size:2.3rem;
         margin:0 5px;
     }
     footer .row div{
@@ -1099,6 +1306,10 @@ footer .copy-right{
     }
     #mission-vision h3{
         text-align:center;
+    }
+    .members figure{
+        
+        width:45%;
     }
     .menu-page p:nth-child(1){
         width:80%;
@@ -1135,11 +1346,15 @@ footer .copy-right{
 @media screen and (max-width: 600px){
     .featuredCousines{
         flex-direction: column;
+        align-items: center;
         flex-wrap: nowrap;
     }
     .featuredCousines figure{
         width:80%;
     }
+    /* .featuredCousines p{
+        width:8%;
+    } */
     .clientsPhotos .clients{
         flex-direction:column;
         flex-wrap:nowrap;
@@ -1187,10 +1402,27 @@ footer .copy-right{
         width:100%;
         height:auto;
     }
+    
     .call-to-action .in-house-text{
         width:100%;
-        padding:20px 40px;
-        height:auto;
+        height:300px;
+    }
+    .in-house{
+        width:100%;
+        height:100%;
+    }
+    .in-house-image{
+        height:100%;
+    }
+    .in-house h2{
+        font-size:1.4rem;
+    }
+    .in-house h3{
+        font-size:1.7rem;
+    }
+    .in-house-image img{
+        width:100%;
+        height:100%;
     }
     .call-to-action .in-house-text h2{
         font-size:1.6rem;
@@ -1200,8 +1432,9 @@ footer .copy-right{
         font-family:'Open Sans';
         font-weight:bolder;
         font-size:1.5rem;
+        color:#fff;
         line-height: 1;
-        letter-spacing: 4px;;
+        letter-spacing: 4px;
     }
     .call-to-action .in-house-text button{
         padding:10px 15px;
@@ -1209,9 +1442,9 @@ footer .copy-right{
     .tips p{
         width:90%;
     }
-    .tipsNtricks{
+    /* .tipsNtricks{
         flex-direction:column;
-    }
+    } */
     .tips article{
         width:80%;
         padding:5px;
@@ -1236,5 +1469,10 @@ footer .copy-right{
     .order_confirmation{
         padding:10px;
     }
-   
+    .members figure{
+        height:200px;
+        width:48%;
+        
+    }
+    
 }
